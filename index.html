@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Songs Analysis</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f5f4;
+      color: #111827;
+      line-height: 1.55;
+    }
+    header {
+      background: #1DB954;
+      color: white;
+      padding: 70px 10%;
+    }
+    header h1 {
+      margin: 0 0 25px;
+      font-size: 42px;
+      font-weight: 800;
+    }
+    header p {
+      font-size: 20px;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+    nav a {
+      color: white;
+      font-weight: 800;
+      font-size: 18px;
+      margin-right: 24px;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1360px;
+      margin: 0 auto;
+      background: white;
+      padding: 65px 40px;
+      min-height: 100vh;
+    }
+    h2 {
+      font-size: 31px;
+      margin: 0 0 25px;
+      font-weight: 800;
+    }
+    p, li {
+      font-size: 20px;
+    }
+    section {
+      margin-bottom: 36px;
+    }
+    .note {
+      border-left: 8px solid #1DB954;
+      background: #e9fbf1;
+      padding: 20px 26px;
+      border-radius: 12px;
+      font-size: 20px;
+      margin-bottom: 32px;
+    }
+    ol {
+      padding-left: 55px;
+    }
+    @media (max-width: 700px) {
+      header { padding: 45px 7%; }
+      header h1 { font-size: 34px; }
+      main { padding: 40px 24px; }
+      p, li { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Spotify Songs Analysis</h1>
+    <p>Python, Pandas, and Matplotlib analysis of a Spotify songs dataset.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="analysis.html">Analysis</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Important Note</h2>
+      <div class="note">
+        This starter analysis page is ready for GitHub Pages. After you run the Colab code, it will generate a more complete
+        <strong>analysis.html</strong> file with tables, charts, correlations, and final insights. Replace this file with the
+        Colab-generated version before submitting.
+      </div>
+    </section>
+
+    <section>
+      <h2>Problem Space</h2>
+      <p>
+        This project studies what makes songs successful on Spotify. The analysis compares streaming totals with playlist
+        placement, artist frequency, release timing, and audio features such as danceability, valence, energy, acousticness,
+        liveness, and speechiness.
+      </p>
+    </section>
+
+    <section>
+      <h2>Dataset Connection</h2>
+      <p>
+        The Spotify dataset is useful because it contains both popularity measures and music feature measures. This lets us
+        ask whether highly streamed songs are popular because of their sound, their visibility, or both.
+      </p>
+    </section>
+
+    <section>
+      <h2>Questions Addressed</h2>
+      <ol>
+        <li>Which songs have the most Spotify streams?</li>
+        <li>Which artists appear most often in the dataset?</li>
+        <li>Do songs in more Spotify playlists tend to have more streams?</li>
+        <li>What audio features are most common among popular songs?</li>
+        <li>Is danceability related to streams?</li>
+        <li>Is energy related to streams?</li>
+        <li>Do newer or older songs dominate the most-streamed list?</li>
+        <li>Which keys and modes appear most often?</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Analysis Method</h2>
+      <p>
+        The Colab notebook imports the dataset into a Pandas DataFrame, cleans numeric columns, creates new columns such as
+        streams in millions, uses summary statistics, filters and groups the data, and creates visualizations with Matplotlib.
+      </p>
+    </section>
+
+    <section>
+      <h2>Expected Insight Story</h2>
+      <p>
+        The project is designed to test whether audio features alone explain streaming success. The stronger expected story is
+        that playlist visibility and platform reach matter a lot, while features like danceability and energy help describe
+        songs but do not fully explain streams by themselves.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
